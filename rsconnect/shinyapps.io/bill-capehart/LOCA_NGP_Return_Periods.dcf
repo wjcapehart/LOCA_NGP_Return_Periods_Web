@@ -1,0 +1,12 @@
+name: LOCA_NGP_Return_Periods
+title: LOCA_NGP_Return_Periods
+username:
+account: bill-capehart
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1031989
+bundleId: 2302123
+url: https://bill-capehart.shinyapps.io/LOCA_NGP_Return_Periods/
+when: 1565296420.16622
+asMultiple: FALSE
+asStatic: FALSE
