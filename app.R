@@ -1,13 +1,12 @@
 #
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
+# LOCA_NGP_Return_Periods_Web
 #
 # Find out more about building applications with Shiny here:x
 #
 #    http://shiny.rstudio.com/
 #
 
-library(package = "shiny")
+library(package = "shiny") 
 library(package = "tidyverse")
 library(package = "lubridate")
 library(package = "ClimClass") 
@@ -20,7 +19,7 @@ library(package = "foreach")
 
 hostname = system("hostname", intern=TRUE)
 
-local_drives = str_detect(hostname, "ias.sdsmt.edu")
+local_drives = TRUE
 
 #
 
@@ -28,29 +27,18 @@ local_drives = str_detect(hostname, "ias.sdsmt.edu")
 #
 # Input Cliamte Data
 #
-if (local_drives) 
-  {
     root_LOCA_URL = "/maelstrom2/LOCA_GRIDDED_ENSEMBLES/LOCA_NGP/climate_divisions/"
-  } else
-  {
-    root_LOCA_URL = "http://kyrill.ias.sdsmt.edu:8080/thredds/fileServer/LOCA_NGP/climate_divisions/"
-  }
 
-if (local_drives) 
-{
+
+
   load(file = "/maelstrom2/LOCA_GRIDDED_ENSEMBLES/LOCA_NGP/climate_divisions/Completed_Divisions.RData")
-} else {
-  load(file = url(description = "http://kyrill.ias.sdsmt.edu:8080/thredds/fileServer/LOCA_NGP/climate_divisions/Completed_Divisions.RData"))
-}
+
 Completed_Divisions = tibble(Full_Zone_Code = Completed_Divisions)
 
 
-if (local_drives) 
-{
   load(file = "/projects/THREDDS/local_academic_repo/CLASS_Examples/nCLIMDIV.Rdata")
-} else {
-  load(file = url(description = "http://kyrill.ias.sdsmt.edu:8080/thredds/fileServer/CLASS_Examples/nCLIMDIV.Rdata"))
-}
+
+
 
 nCLIMDIV$State_Name = gsub(pattern     = "\u00A0", 
                            replacement = "", 
@@ -129,13 +117,7 @@ state_number = state_number_init
 
 
 
-
-if (local_drives) 
-{
   load(file = "/projects/THREDDS/local_academic_repo/CLASS_Examples/Atlas_14_NGP_by_Climate_Divisions.RData")
-} else {
-  load(file = url(description = "http://kyrill.ias.sdsmt.edu:8080/thredds/fileServer/CLASS_Examples/Atlas_14_NGP_by_Climate_Divisions.RData"))
-}
 
 
 
@@ -520,15 +502,10 @@ server = function(input,
         
         
         
-        if (local_drives) 
-        {
+
           load(file    = LOCA_URL,
                verbose = TRUE)
-        } else {
-          load(file    = url(LOCA_URL),
-               verbose = TRUE)
-        }
-        
+
         
         
 
