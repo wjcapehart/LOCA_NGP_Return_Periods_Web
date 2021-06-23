@@ -501,11 +501,12 @@ server = function(input,
                              loca_filename,
                              sep = "")
         
-        
-        
+        print("**********************")        
+        print(LOCA_URL)
+        print("**********************")
 
           load(file    = LOCA_URL,
-               verbose = TRUE)
+               verbose = FALSE)
 
         
         
