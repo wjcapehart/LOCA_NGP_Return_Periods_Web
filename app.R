@@ -11,7 +11,7 @@ library(package = "tidyverse")
 library(package = "lubridate")
 library(package = "ClimClass") 
 library(package = "extRemes") 
-library(package = "scPDSI")
+#library(package = "scPDSI")
 library(package = "foreach")
 
 #
