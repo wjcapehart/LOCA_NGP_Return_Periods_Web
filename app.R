@@ -497,6 +497,7 @@ server = function(input,
                               sep = "")
         
         LOCA_URL     = str_c(root_LOCA_URL,
+                             "/R_Daily_Files/",
                              loca_filename,
                              sep = "")
         
