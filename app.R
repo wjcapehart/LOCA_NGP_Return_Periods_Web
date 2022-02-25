@@ -27,11 +27,11 @@ local_drives = TRUE
 #
 # Input Cliamte Data
 #
-    root_LOCA_URL = "/maelstrom2/LOCA_GRIDDED_ENSEMBLES/LOCA_NGP/Specific_Regional_Aggregate_Sets/climate_divisions/"
+    root_LOCA_URL = "/projects/ECEP/LOCA_MACA_Ensembles/LOCA/LOCA_NGP/Specific_Regional_Aggregate_Sets/"
 
 
 
-  load(file = "/maelstrom2/LOCA_GRIDDED_ENSEMBLES/LOCA_NGP/Specific_Regional_Aggregate_Sets/climate_divisions/Completed_Divisions.RData")
+  load(file = "/projects/ECEP/LOCA_MACA_Ensembles/LOCA/LOCA_NGP/Specific_Regional_Aggregate_Sets/climate_divisions/Completed_Divisions.RData")
 
 Completed_Divisions = tibble(Full_Zone_Code = Completed_Divisions)
 
