@@ -27,7 +27,7 @@ local_drives = TRUE
 #
 # Input Cliamte Data
 #
-    root_LOCA_URL = "/projects/ECEP/LOCA_MACA_Ensembles/LOCA/LOCA_NGP/Specific_Regional_Aggregate_Sets/"
+    root_LOCA_URL = "/projects/ECEP/LOCA_MACA_Ensembles/LOCA/LOCA_NGP/Specific_Regional_Aggregate_Sets/climate_divisions/"
 
 
 
